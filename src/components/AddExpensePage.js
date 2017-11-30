@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { addExpense } from '../actions/expenses';
+import { startAddExpense } from '../actions/expenses';
 
 // export class for testing
 export class AddExpensePage extends React.Component {
   onSubmit = (expense) => {
     // this.props.dispatch(addExpense(expense));
-    this.props.addExpense(expense);
+    this.props.startAddExpense(expense);
     // automate redirect after submitting the form
     this.props.history.push('/');
   }
@@ -24,11 +24,10 @@ export class AddExpensePage extends React.Component {
 
 // return an object as a Redux action creator
 const mapDispatchToProps = dispatch => ({
-  addExpense: expense => dispatch(addExpense(expense))
+  startAddExpense: expense => dispatch(startAddExpense(expense))
 });
 
 AddExpensePage.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired
   }).isRequired
