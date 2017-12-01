@@ -7,7 +7,7 @@ export default (expenses, { text, sortBy, startDate, endDate }) => {
     const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true;
     const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true;
     // figure out if expenses.description has the text variable string inside of it
-    const textMatch = expense.description.toLowerCase().includes(text.toLowerCase());
+    const textMatch = expense.description.toLowerCase().includes(text.trim().toLowerCase());
 
     return startDateMatch && endDateMatch && textMatch;
   }).sort((a, b) => {
