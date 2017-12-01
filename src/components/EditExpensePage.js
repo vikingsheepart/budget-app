@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { editExpense, removeExpense } from '../actions/expenses';
+import { editExpense, startRemoveExpense } from '../actions/expenses';
 
 // Refactor EditExpensePage to be a class based component for better performance
 // check https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#no-bind-or-arrow-functions-in-jsx-props-reactjsx-no-bind
@@ -13,7 +13,7 @@ export class EditExpensePage extends React.Component {
     this.props.history.push('/');
   };
   onRemove = () => {
-    this.props.removeExpense({ id: this.props.expense.id });
+    this.props.startRemoveExpense({ id: this.props.expense.id });
     this.props.history.push('/');
   };
   render() {
@@ -39,7 +39,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = dispatch => ({
   editExpense: (id, expense) => dispatch(editExpense(id, expense)),
-  removeExpense: ({ id }) => dispatch(removeExpense({ id }))
+  startRemoveExpense: ({ id }) => dispatch(startRemoveExpense({ id }))
 });
 
 EditExpensePage.propTypes = {

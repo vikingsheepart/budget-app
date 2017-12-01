@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 if (process.env.NODE_ENV === 'development') {
-  // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+  // eslint-disable-next-line
   require('dotenv').config({ path: '.env.development' });
 }
 
