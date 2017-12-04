@@ -1,4 +1,5 @@
 import { firebase, googleAuthProvider } from '../firebase/firebase';
+import { setExpenses } from './expenses';
 
 export const login = uid => ({
   type: 'LOGIN',
@@ -17,7 +18,12 @@ export const logout = () => ({
 });
 
 export const startLogout = () => {
-  return () => {
-    return firebase.auth().signOut();
+  return (dispatch) => {
+    return firebase.auth().signOut()
+      // reset the state to the initial state locally
+      // prevent a flash of the previous user's data before startSetExpenses takes place
+      .then(() => {
+        dispatch(setExpenses([]));
+      });
   };
 };
