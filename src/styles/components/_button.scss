@@ -24,11 +24,7 @@
     background: #888888;
   }
 
-  &--disabled {
-    background: grey;
-
-    &:hover {
-      cursor: not-allowed;
-    }
+  &--danger {
+    background: $bright-red;
   }
 }

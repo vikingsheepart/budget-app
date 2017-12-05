@@ -2,17 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
+import ConfirmRemovalModal from './ConfirmRemovalModal';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
 // Refactor EditExpensePage to be a class based component for better performance
 // check https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#no-bind-or-arrow-functions-in-jsx-props-reactjsx-no-bind
 // export class for testing
 export class EditExpensePage extends React.Component {
+  state = {
+    isModalOpen: false
+  };
   onSubmit = (expense) => {
     this.props.startEditExpense(this.props.expense.id, expense);
     this.props.history.push('/');
   };
+  onToggleModal = () => {
+    this.setState(() => ({ isModalOpen: !this.state.isModalOpen}));
+  };
   onRemove = () => {
+    this.setState(() => ({ isModalOpen: false }));
     this.props.startRemoveExpense({ id: this.props.expense.id });
     this.props.history.push('/');
   };
@@ -30,10 +38,16 @@ export class EditExpensePage extends React.Component {
             expense={this.props.expense}
             onSubmit={this.onSubmit}
           />
-          <button className="button button--secondary" onClick={this.onRemove}>
+          <button className="button button--secondary" onClick={this.onToggleModal}>
             Remove Expense
           </button>
         </div>
+        <ConfirmRemovalModal
+          expense={this.props.expense}
+          isModalOpen={this.state.isModalOpen}
+          onToggleModal={this.onToggleModal}
+          onRemove={this.onRemove}
+        />
       </div>
     )
   }

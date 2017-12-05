@@ -35,6 +35,8 @@
 
 * Render skeleton-ish screen while loading data for better user experience
 
+* Confirmation modal when removing expense
+
 ## Getting Started
 
 ### Clone or download this repository
