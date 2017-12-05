@@ -7,9 +7,10 @@ html {
 }
 
 body {
-  background-color: white;
+  color: $dark-grey;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
+  line-height: 1.6;
 }
 
 button {
@@ -20,6 +21,6 @@ button {
   }
 }
 
-.is-active {
-  font-weight: bold;
+:focus {
+  outline: 0;
 }

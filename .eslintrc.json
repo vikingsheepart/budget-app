@@ -21,6 +21,7 @@
         "specialLink": [ "to" ]
       }
     ],
+    "max-len": 1,
     "no-underscore-dangle": [
       "error",
       {

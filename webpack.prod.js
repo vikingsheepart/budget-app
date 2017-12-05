@@ -18,12 +18,13 @@ const VENDOR_LIBS = [
 
 module.exports = {
   entry: {
-    bundle: './src/app.js',
+    bundle: ['babel-polyfill', './src/app.js'],
     vendor: VENDOR_LIBS
   },
   output: {
-    path: path.resolve(__dirname, 'public', 'dist'),
-    filename: '[name].[chunkhash].js'
+    path: path.join(__dirname, 'public'),
+    publicPath: '/',
+    filename: 'dist/[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -77,9 +78,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      filename: '../index.html'
+      filename: 'index.html'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('dist/style.css')
   ],
   devtool: 'source-map'
 };

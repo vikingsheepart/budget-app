@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 if (process.env.NODE_ENV === 'development') {
   // eslint-disable-next-line
@@ -10,10 +9,11 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 module.exports = {
-  entry: './src/app.js',
+  entry: ['babel-polyfill', './src/app.js'],
   output: {
-    path: path.resolve(__dirname, 'public', 'dist'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'public'),
+    publicPath: '/', // add starting slash for src in link and script tag
+    filename: 'dist/bundle.js'
   },
   module: {
     rules: [
@@ -59,18 +59,16 @@ module.exports = {
       'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
       'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID)
     }),
-    new CleanWebpackPlugin(['public/dist']),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      filename: '../index.html'
+      filename: 'index.html'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('dist/style.css')
   ],
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'public'),
     // serve up index.html in place of 404 responses
-    historyApiFallback: true,
-    publicPath: '/dist/'
+    historyApiFallback: true
   }
 };
