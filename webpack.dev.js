@@ -69,6 +69,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     // serve up index.html in place of 404 responses
-    historyApiFallback: true
+    historyApiFallback: true,
+    port: 8080
   }
 };

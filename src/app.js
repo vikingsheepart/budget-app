@@ -19,6 +19,8 @@ const jsx = (
   </Provider>
 );
 
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
+
 // avoid re-rendering if the app has been loaded
 let hasRendered = false;
 const renderApp = () => {
@@ -27,8 +29,6 @@ const renderApp = () => {
     hasRendered = true;
   }
 };
-
-ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
