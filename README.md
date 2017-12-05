@@ -8,7 +8,7 @@
 
  or
 
- To run that demo on your own computer, please follow the instructions in the Getting Started section
+ To run that demo on your own computer, please follow the instructions in [Getting Started](https://github.com/lucasweng/expensify#getting-started)
 
 
 ## Features
@@ -27,7 +27,7 @@
 
   * Display expenses by date or amount
 
-  * Filter expenses within a time span
+  * Filter expenses by a time span
 
 * Responsive web design
 
@@ -55,7 +55,9 @@ yarn install
 yarn dev-server
 ```
 
-### Visit [http://localhost:8080](http://localhost:8080)
+### See the app
+
+Visit [http://localhost:8080](http://localhost:8080)
 
 ### Troubleshooting
 
@@ -76,7 +78,7 @@ yarn dev-server
 TL;DR: It's very likely that the index.html in the public folder couldn't access the CSS and the JS files, because the HTML file might be of the production version(in which JS files are named with chunkhash for code splitting) instead of the development version(which contains one bundle.js), and webpack-dev-sever won't generate HTML file after compilation.
 
 
-## Running tests
+### Running tests
 
 If you would like to run the tests:
 
