@@ -45,6 +45,8 @@
 
 * Error handling for authenticatoin
 
+* Refactor react-dates' date picker for better UI on mobile
+
 * Link multiple auth providers to an account
 
 ## Getting Started

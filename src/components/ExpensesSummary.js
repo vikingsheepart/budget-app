@@ -26,7 +26,7 @@ export const ExpensesSummary = ({
         {
           databaseExpensesCount === 0 && expensesCount === 0 ? (
             <h2 className="page-header__title">
-              No expenses, have you bought something today?
+              Need to keep track of some expenses?
             </h2>
           ) : (
             <h2 className="page-header__title">

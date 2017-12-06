@@ -97,6 +97,7 @@ export default class ExpenseForm extends React.Component {
           isOutsideRange={() => false} // allow selecting past days
           showDefaultInputIcon
           hideKeyboardShortcutsPanel
+          block
         />
         <textarea
           className="textarea"
