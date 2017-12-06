@@ -65,6 +65,8 @@ export class ExpenseListFilters extends React.Component {
               showClearDates={true}
               numberOfMonths={1}
               isOutsideRange={() => false} // allow selecting past days
+              showDefaultInputIcon
+              hideKeyboardShortcutsPanel
             />
           </div>
         </div>

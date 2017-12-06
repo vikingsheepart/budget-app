@@ -12,12 +12,13 @@ export default class ExpenseForm extends React.Component {
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
       note: props.expense ? props.expense.note : '',
       calendarFocused: false,
-      error: ''
+      errorDescription: '',
+      errorAmount: ''
     };
   }
   onDescriptionChange = (e) => {
     const description = e.target.value;
-    this.setState(() => ({ description }));
+    this.setState(() => ({ description, errorDescription: '' }));
   };
   onNoteChange = (e) => {
     const note = e.target.value;
@@ -29,7 +30,7 @@ export default class ExpenseForm extends React.Component {
     // allow input to begin with numbers with at most 2 decimal places
     // no letters allowed
     if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
-      this.setState(() => ({ amount }));
+      this.setState(() => ({ amount, errorAmount: '' }));
     }
   };
   onDateChange = (createdAt) => {
@@ -45,11 +46,19 @@ export default class ExpenseForm extends React.Component {
     e.preventDefault();
     // input validation
     if (!this.state.description || !this.state.amount) {
-      // Set error state equal to 'Please provide description and amount.'
-      this.setState(() => ({ error: 'Please provide description and amount.' }));
+      if (!this.state.description) {
+        this.setState(() => ({ errorDescription: 'Please provide description' }));
+
+      }
+      if (!this.state.amount) {
+        this.setState(() => ({ errorAmount: 'Please provide amount' }));
+      } 
     } else {
       // Clear the error
-      this.setState(() => ({ error: '' }));
+      this.setState(() => ({
+        errorDescription: '',
+        errorAmount: ''
+      }));
       // Pass newly created expense to AddExpensePage and EditExpensePage
       this.props.onSubmit({
         description: this.state.description,
@@ -62,17 +71,18 @@ export default class ExpenseForm extends React.Component {
   render() {
     return (
       <form className="form" onSubmit={this.onSubmit}>
-        {this.state.error && <p className="form__error">{this.state.error}</p>}
+        {this.state.errorDescription && <p className="form__error">{this.state.errorDescription}</p>}
         <input
-          className="text-input"
+          className={this.state.errorDescription ? "text-input text-input__error" : "text-input"}
           type="text"
           placeholder="Description"
           value={this.state.description}
           autoFocus
           onChange={this.onDescriptionChange}
         />
+        {this.state.errorAmount && <p className="form__error">{this.state.errorAmount}</p>}
         <input
-          className="text-input"
+          className={this.state.errorAmount ? "text-input text-input__error" : "text-input"}
           type="text"
           placeholder="Amount"
           value={this.state.amount}
@@ -86,6 +96,7 @@ export default class ExpenseForm extends React.Component {
           numberOfMonths={1}
           isOutsideRange={() => false} // allow selecting past days
           showDefaultInputIcon
+          hideKeyboardShortcutsPanel
         />
         <textarea
           className="textarea"

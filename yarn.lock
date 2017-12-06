@@ -5341,16 +5341,16 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-addons-shallow-compare@^15.6.2:
+react-addons-shallow-compare@^15.5.2, react-addons-shallow-compare@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-addons-shallow-compare/-/react-addons-shallow-compare-15.6.2.tgz#198a00b91fc37623db64a28fd17b596ba362702f"
   dependencies:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-dates@^15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-15.1.0.tgz#0f0aaa0614d096aa38c928234f9ec25bc6fe9391"
+react-dates@^15.3.0:
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-15.3.0.tgz#a843bfc7811fa3c118928f6f03a1479045126654"
   dependencies:
     airbnb-prop-types "^2.8.1"
     consolidated-events "^1.1.0"
@@ -5359,6 +5359,7 @@ react-dates@^15.1.0:
     object.assign "^4.0.4"
     object.values "^1.0.4"
     prop-types "^15.5.10"
+    react-addons-shallow-compare "^15.5.2"
     react-moment-proptypes "^1.5.0"
     react-portal "^3.1.0"
     react-with-styles "^2.2.0"
@@ -5464,7 +5465,7 @@ react-with-styles@^2.2.0:
     prop-types "^15.6.0"
     react-with-direction "^1.1.0"
 
-react@^16.1.1:
+react@16.1.1:
   version "16.1.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.1.1.tgz#d5c4ef795507e3012282dd51261ff9c0e824fe1f"
   dependencies:

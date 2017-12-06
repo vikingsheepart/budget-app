@@ -31,11 +31,21 @@
 
 * Responsive web design
 
-### Custom Enhancement
+### Custom Enhancements
 
 * Render skeleton-ish screen while loading data for better user experience
 
 * Confirmation modal when removing expense
+
+* Show username and number of hidden expenses on the dashboard
+
+* Authentication with Facebook account
+
+### Enhancements to be made
+
+* Error handling for authenticatoin
+
+* Link multiple auth providers to an account
 
 ## Getting Started
 
@@ -98,6 +108,7 @@ yarn test --watch
 * [redux](https://redux.js.org/)
 * [redux-thunk](https://github.com/gaearon/redux-thunk#redux-thunk)
 * [react-dates](https://github.com/airbnb/react-dates#react-dates-)
+* [react-modal](https://reactcommunity.org/react-modal/)
 * [firebase](https://firebase.google.com/docs/reference/js/#firebase)
 * [normalize.css](http://nicolasgallagher.com/about-normalize-css/)
 * [moment](https://momentjs.com/)

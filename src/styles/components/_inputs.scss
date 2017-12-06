@@ -4,6 +4,10 @@
   font-weight: 300;
   height: 50px;
   padding: $s-size;
+
+  &__error {
+    border: 1px solid $bright-red;
+  }
 }
 
 .select {

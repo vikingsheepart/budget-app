@@ -1,15 +1,26 @@
-import { firebase, googleAuthProvider } from '../firebase/firebase';
+import { firebase, googleAuthProvider, facebookAuthProvider } from '../firebase/firebase';
 import { setExpenses } from './expenses';
+import handleAuthError from './handleAuthError';
 
-export const login = uid => ({
+export const login = (uid, firstname) => ({
   type: 'LOGIN',
-  uid
+  uid,
+  firstname
 });
 
-export const startLogin = () => {
+export const startGoogleLogin = () => {
   // conform to the redux-thunk spec by returning a function
   return () => {
-    return firebase.auth().signInWithPopup(googleAuthProvider);
+    return firebase.auth().signInWithPopup(googleAuthProvider)
+      .catch((e) => { handleAuthError(e); });
+  };
+};
+
+export const startFacebookLogin = () => {
+  // conform to the redux-thunk spec by returning a function
+  return () => {
+    return firebase.auth().signInWithPopup(facebookAuthProvider)
+      .catch((e) => { handleAuthError(e); });
   };
 };
 

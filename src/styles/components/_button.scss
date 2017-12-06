@@ -27,4 +27,17 @@
   &--danger {
     background: $bright-red;
   }
+
+  &__login-box {
+    margin: 1rem auto;
+    width: 25rem;
+  }
+
+  &--go {
+    background: rgb(199, 0, 0);
+  }
+
+  &--fb {
+    background: rgb(43, 75, 161);
+  }
 }

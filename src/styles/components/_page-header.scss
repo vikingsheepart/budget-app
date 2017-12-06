@@ -15,4 +15,9 @@
   &__actions {
     margin-top: $m-size;
   }
+
+  &--no-mg {
+    margin: 0;
+    padding: 0;
+  }
 }
