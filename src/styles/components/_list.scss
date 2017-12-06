@@ -55,6 +55,20 @@
     }
   }
 
+  &__note {
+    color: $grey;
+    font-size: $font-md;
+    margin: $s-size 0 0 0;
+    text-align: left;
+    word-break: break-all;
+
+    @media (min-width: $desktop-breakpoint) {
+      margin: 0;
+      min-width: 32%;
+      padding: 0 $s-size 0 $l-size; 
+    }
+  }
+
   &--message {
     align-items: center;
     color: $grey;
