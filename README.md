@@ -77,20 +77,21 @@ Visit [http://localhost:8080](http://localhost:8080)
 
 #### Rendering blank page when running dev-server
 
+TL;DR: the output HTML file might be of production version, so the dev-server cannot access the JS file with the file's references.
+
 Re-build the development version by running:
 
 ```sh
 yarn run build:dev
 ```
 
-Then start the dev-server again with:
+Then start the webpack-dev-server again with:
 
 ```sh
 yarn dev-server
 ```
 
-TL;DR: It's very likely that the index.html in the public folder couldn't access the CSS and the JS files, because the HTML file might be of the production version(in which JS files are named with chunkhash for code splitting) instead of the development version(which contains one bundle.js), and webpack-dev-sever won't generate HTML file after compilation.
-
+In this project, there are two versions of webpack configuration that produce JS files with different naming method. In order to correctly access those output files every time we build, webpack is set to automatically generate HTML files and wire them up to JS files with varying names. However, the webpack-dev-server is set to be serving outputs of the development version for the existing HTML file without generating a new one. So, it is likely to have the production version HTML be served with the development version JS file when running the dev-server, and that would therefore render nothing on the page.
 
 ### Running tests
 
