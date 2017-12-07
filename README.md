@@ -77,7 +77,7 @@ Visit [http://localhost:8080](http://localhost:8080)
 
 #### Rendering blank page when running dev-server
 
-TL;DR: the output HTML file might be of production version, so the dev-server cannot access the JS file with the file's references.
+TL;DR: the HTML output might be of the production version, so the dev-server cannot access the correct JS source file.
 
 Re-build the development version by running:
 
