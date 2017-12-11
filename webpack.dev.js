@@ -63,7 +63,7 @@ module.exports = {
       template: 'src/index.html',
       filename: 'index.html'
     }),
-    new ExtractTextPlugin('dist/style.css')
+    new ExtractTextPlugin('dist/style.[contenthash].css')
   ],
   devtool: 'inline-source-map',
   devServer: {

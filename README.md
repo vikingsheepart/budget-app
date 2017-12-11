@@ -117,6 +117,7 @@ yarn test --watch
 * [moment](https://momentjs.com/)
 * [numeral](http://numeraljs.com/)
 * [babel](http://babeljs.io/)
+* [babel-plugin-transform-class-properties](https://babeljs.io/docs/plugins/transform-class-properties/)
 * [webpack](https://webpack.js.org/concepts/)
 * [eslint](https://eslint.org/)
 * [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb#eslint-config-airbnb)

@@ -65,6 +65,8 @@ const mapDispatchToProps = dispatch => ({
 
 EditExpensePage.propTypes = {
   expense: PropTypes.shape().isRequired,
+  startEditExpense: PropTypes.func.isRequired,
+  startRemoveExpense: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired
   }).isRequired

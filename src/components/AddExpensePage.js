@@ -34,6 +34,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 AddExpensePage.propTypes = {
+  startAddExpense: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired
   }).isRequired
