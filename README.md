@@ -1,6 +1,7 @@
 # Expensify
 
 [![Build Status](https://travis-ci.org/lucasweng/expensify.svg?branch=master)](https://travis-ci.org/lucasweng/expensify)
+[![Coverage Status](https://coveralls.io/repos/github/lucasweng/expensify/badge.svg?branch=master)](https://coveralls.io/github/lucasweng/expensify?branch=master)
 
 > A React web app project from the Udemy course - [The Complete React Web Developer Course by Andrew Mead](https://www.udemy.com/react-2nd-edition/)
 
@@ -34,13 +35,19 @@
 
 ### Custom Enhancements
 
-* Render skeleton-ish screen while loading data for better user experience
-
-* Confirmation modal when removing expense
-
-* Show username and number of hidden expenses on the dashboard
-
 * Authentication with Facebook account
+
+* Better user experience:
+
+  * Render skeleton-ish screen while loading data
+
+  * Confirmation modal when removing expense
+
+  * Show username and greeting
+  
+  * Display number of hidden expenses while searching or filtering expenses
+
+  * Custom NotFound page
 
 ### Enhancements to be made
 

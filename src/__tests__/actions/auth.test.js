@@ -1,4 +1,9 @@
-import { login, logout } from '../../actions/auth';
+import {
+  login,
+  logout,
+  startGoogleLogin,
+  startFacebookLogin
+} from '../../actions/auth';
 
 test('should setup login action object', () => {
   const uid = 'asdfghjkl';
@@ -9,6 +14,16 @@ test('should setup login action object', () => {
     uid,
     firstname
   });
+});
+
+test('should setup startGoogleLogin action', () => {
+  const action = startGoogleLogin();
+  expect(action).toBeDefined();
+});
+
+test('should setup startFacebookLogin action', () => {
+  const action = startFacebookLogin();
+  expect(action).toBeDefined();
 });
 
 test('should setup logout action object', () => {

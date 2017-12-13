@@ -6,7 +6,7 @@ import ConfirmRemovalModal from './ConfirmRemovalModal';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 
 // Refactor EditExpensePage to be a class based component for better performance
-// check https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#no-bind-or-arrow-functions-in-jsx-props-reactjsx-no-bind
+// check https://goo.gl/EYjYLo
 // export class for testing
 export class EditExpensePage extends React.Component {
   state = {

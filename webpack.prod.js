@@ -25,7 +25,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     publicPath: '/',
-    filename: 'dist/[name].[chunkhash].js'
+    filename: 'dist/[name].[chunkhash:8].js'
   },
   module: {
     rules: [
@@ -81,7 +81,7 @@ module.exports = {
       template: 'src/index.html',
       filename: 'index.html'
     }),
-    new ExtractTextPlugin('dist/style.[contenthash].css')
+    new ExtractTextPlugin('dist/style.[contenthash:8].css')
   ],
   devtool: 'source-map'
 };
