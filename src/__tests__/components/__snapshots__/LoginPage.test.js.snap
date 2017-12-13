@@ -15,11 +15,21 @@ exports[`sould render LoginPage correctly 1`] = `
     <p>
       Manage your wealth and better your life
     </p>
-    <button
-      className="button"
+    <hr />
+    <div
+      className="box-layout__buttons"
     >
-      Login with Google
-    </button>
+      <button
+        className="button button__login-box button--go"
+      >
+        Login with Google
+      </button>
+      <button
+        className="button button__login-box button--fb"
+      >
+        Login with Facebook
+      </button>
+    </div>
   </div>
 </div>
 `;

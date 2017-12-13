@@ -10,7 +10,6 @@
 
  To run that demo on your own computer, please follow the instructions in [Getting Started](https://github.com/lucasweng/expensify#getting-started)
 
-
 ## Features
 
 * Integration with Firebase:
@@ -51,6 +50,8 @@
 
 ## Getting Started
 
+> The data concerning Firebase configuration have been hidden deliberately, so the app cannot be run with its features on your local machine. If you would like to run it locally, please create your own Firebase project following the official [setup guide](https://firebase.google.com/docs/web/setup).
+
 ### Clone or download this repository
 
 ```sh
@@ -61,6 +62,19 @@ git clone https://github.com/lucasweng/expensify.git
 
 ```sh
 yarn install
+```
+
+### Setup Firebase configuration
+
+Create a .env.development file under the root folder of this project
+
+```
+FIREBASE_API_KEY=YOUR_API_KEY
+FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+FIREBASE_DATABASE_URL=YOUR_DATABASE_URL
+FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
 ```
 
 ### Run the app

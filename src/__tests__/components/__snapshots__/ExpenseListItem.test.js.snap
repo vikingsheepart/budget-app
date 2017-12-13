@@ -18,6 +18,9 @@ exports[`should render ExpenseListItem correctly 1`] = `
       January 1st, 1970
     </span>
   </div>
+  <span
+    className="list-item__note"
+  />
   <h3
     className="list-item__amount"
   >

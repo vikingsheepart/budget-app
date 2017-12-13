@@ -22,6 +22,7 @@ exports[`should render ExpenseForm correctly 1`] = `
   />
   <withStyles(SingleDatePicker)
     anchorDirection="left"
+    block={true}
     customCloseIcon={null}
     customInputIcon={null}
     date={"1970-01-01T00:00:00.000Z"}
@@ -31,7 +32,7 @@ exports[`should render ExpenseForm correctly 1`] = `
     enableOutsideDays={false}
     firstDayOfWeek={null}
     focused={false}
-    hideKeyboardShortcutsPanel={false}
+    hideKeyboardShortcutsPanel={true}
     horizontalMargin={0}
     id="date"
     initialVisibleMonth={null}
@@ -44,6 +45,7 @@ exports[`should render ExpenseForm correctly 1`] = `
     monthFormat="MMMM YYYY"
     navNext={null}
     navPrev={null}
+    noBorder={false}
     numberOfMonths={1}
     onClose={[Function]}
     onDateChange={[Function]}
@@ -135,6 +137,7 @@ exports[`should render ExpenseForm correctly with expense data 1`] = `
   />
   <withStyles(SingleDatePicker)
     anchorDirection="left"
+    block={true}
     customCloseIcon={null}
     customInputIcon={null}
     date={"1970-01-01T00:00:00.000Z"}
@@ -144,7 +147,7 @@ exports[`should render ExpenseForm correctly with expense data 1`] = `
     enableOutsideDays={false}
     firstDayOfWeek={null}
     focused={false}
-    hideKeyboardShortcutsPanel={false}
+    hideKeyboardShortcutsPanel={true}
     horizontalMargin={0}
     id="date"
     initialVisibleMonth={null}
@@ -157,6 +160,7 @@ exports[`should render ExpenseForm correctly with expense data 1`] = `
     monthFormat="MMMM YYYY"
     navNext={null}
     navPrev={null}
+    noBorder={false}
     numberOfMonths={1}
     onClose={[Function]}
     onDateChange={[Function]}
@@ -248,6 +252,7 @@ exports[`should render error for invalid form submission 1`] = `
   />
   <withStyles(SingleDatePicker)
     anchorDirection="left"
+    block={true}
     customCloseIcon={null}
     customInputIcon={null}
     date={"1970-01-01T00:00:00.000Z"}
@@ -257,7 +262,7 @@ exports[`should render error for invalid form submission 1`] = `
     enableOutsideDays={false}
     firstDayOfWeek={null}
     focused={false}
-    hideKeyboardShortcutsPanel={false}
+    hideKeyboardShortcutsPanel={true}
     horizontalMargin={0}
     id="date"
     initialVisibleMonth={null}
@@ -270,6 +275,7 @@ exports[`should render error for invalid form submission 1`] = `
     monthFormat="MMMM YYYY"
     navNext={null}
     navPrev={null}
+    noBorder={false}
     numberOfMonths={1}
     onClose={[Function]}
     onDateChange={[Function]}
@@ -347,18 +353,23 @@ exports[`should render error for invalid form submission 2`] = `
   <p
     className="form__error"
   >
-    Please provide description and amount.
+    Please provide description
   </p>
   <input
     autoFocus={true}
-    className="text-input"
+    className="text-input text-input__error"
     onChange={[Function]}
     placeholder="Description"
     type="text"
     value=""
   />
+  <p
+    className="form__error"
+  >
+    Please provide amount
+  </p>
   <input
-    className="text-input"
+    className="text-input text-input__error"
     onChange={[Function]}
     placeholder="Amount"
     type="text"
@@ -366,6 +377,7 @@ exports[`should render error for invalid form submission 2`] = `
   />
   <withStyles(SingleDatePicker)
     anchorDirection="left"
+    block={true}
     customCloseIcon={null}
     customInputIcon={null}
     date={"1970-01-01T00:00:00.000Z"}
@@ -375,7 +387,7 @@ exports[`should render error for invalid form submission 2`] = `
     enableOutsideDays={false}
     firstDayOfWeek={null}
     focused={false}
-    hideKeyboardShortcutsPanel={false}
+    hideKeyboardShortcutsPanel={true}
     horizontalMargin={0}
     id="date"
     initialVisibleMonth={null}
@@ -388,6 +400,7 @@ exports[`should render error for invalid form submission 2`] = `
     monthFormat="MMMM YYYY"
     navNext={null}
     navPrev={null}
+    noBorder={false}
     numberOfMonths={1}
     onClose={[Function]}
     onDateChange={[Function]}

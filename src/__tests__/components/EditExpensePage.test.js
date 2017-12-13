@@ -26,8 +26,14 @@ test('should handle onSubmit', () => {
   expect(startEditExpense).toHaveBeenLastCalledWith(expenses[0].id, expenses[0]);
 });
 
-test('should handle onClick', () => {
-  wrapper.find('button').simulate('click');
+test('should handle onRemove', () => {
+  wrapper.find('ConfirmRemovalModal').prop('onRemove')();
+  expect(wrapper.state('isModalOpen')).toBe(false);
   expect(history.push).toHaveBeenLastCalledWith('/');
   expect(startRemoveExpense).toHaveBeenLastCalledWith({ id: expenses[0].id });
+});
+
+test('should handle onToggleModal', () => {
+  wrapper.find('ConfirmRemovalModal').prop('onToggleModal')();
+  expect(wrapper.state('isModalOpen')).toBe(true);
 });
