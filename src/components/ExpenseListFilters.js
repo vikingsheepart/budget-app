@@ -95,8 +95,7 @@ ExpenseListFilters.propTypes = {
     sortBy: PropTypes.string.isRequired,
     startDate: momentPropTypes.momentObj,
     endDate: momentPropTypes.momentObj
-  }).isRequired,
-  dispatch: PropTypes.func.isRequired
+  }).isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExpenseListFilters);
