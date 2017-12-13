@@ -73,6 +73,10 @@ yarn dev-server
 
 Visit [http://localhost:8080](http://localhost:8080)
 
+### Comments in code
+
+Some comments in the source code are course notes and therefore might seem unnecessary from a developer's point of view.
+
 ### Troubleshooting
 
 #### Rendering blank page when running dev-server
