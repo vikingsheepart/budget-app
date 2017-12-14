@@ -75,7 +75,7 @@ yarn install
 
 ### Setup Firebase configuration
 
-Create a .env.development file under the root folder of this project
+In the root folder of this project, create a file named .env.development with:
 
 ```
 FIREBASE_API_KEY=YOUR_API_KEY
@@ -98,7 +98,7 @@ Visit [http://localhost:8080](http://localhost:8080)
 
 ### Comments in code
 
-Some comments in the source code are course notes and therefore might seem unnecessary from a developer's point of view.
+Some comments in the source code are course notes and therefore might not seem necessary from a developer's point of view.
 
 ### Troubleshooting
 
