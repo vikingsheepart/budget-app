@@ -10,6 +10,7 @@ const VENDOR_LIBS = [
   'react-redux',
   'react-router-dom',
   'react-dates',
+  'react-modal',
   'redux',
   'firebase',
   'uuid',
