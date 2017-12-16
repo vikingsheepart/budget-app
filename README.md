@@ -1,6 +1,7 @@
 # Expensify
 
 [![Build Status](https://travis-ci.org/lucasweng/expensify.svg?branch=master)](https://travis-ci.org/lucasweng/expensify)
+[![codecov](https://codecov.io/gh/lucasweng/expensify/branch/master/graph/badge.svg)](https://codecov.io/gh/lucasweng/expensify)
 
 > A React web app project from the Udemy course - [The Complete React Web Developer Course by Andrew Mead](https://www.udemy.com/react-2nd-edition/)
 
