@@ -53,9 +53,15 @@
 
 * Error handling for authenticatoin
 
-* Refactor react-dates' date picker for better UI on mobile
+* Customize react-dates' date picker for better UI on mobile
 
 * Link multiple auth providers to an account
+
+### Custom Configurations
+
+* Code splitting to optimize load time at second visit
+
+* Add hashes to filenames for cache-busting
 
 ## Getting Started
 
@@ -120,12 +126,12 @@ yarn dev-server
 
 In this project, there are two versions of webpack configuration that produce JS files with different naming method. In order to correctly access those output files every time we build, webpack is set to automatically generate HTML files and wire them up to JS files with varying names. However, the webpack-dev-server is set to be serving outputs of the development version for the existing HTML file without generating a new one. So, it is likely to have the production version HTML be served with the development version JS file when running the dev-server, and that would therefore render nothing on the page.
 
-### Running tests
+### Run the tests
 
 If you would like to run the tests:
 
 ```sh
-yarn test --watch
+yarn test
 ```
 
 ## Built with
