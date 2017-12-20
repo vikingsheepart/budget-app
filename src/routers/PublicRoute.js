@@ -30,4 +30,3 @@ PublicRoute.propTypes = {
 };
 
 export default connect(mapStateToProps)(PublicRoute);
-
