@@ -13,8 +13,8 @@
     "arrow-body-style": 1,
     "comma-dangle": [ "error", "never" ],
     "import/first": 0,
-    "import/no-named-as-default": 0, // for testing
-    "import/no-named-as-default-member": 0, // for testing
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
