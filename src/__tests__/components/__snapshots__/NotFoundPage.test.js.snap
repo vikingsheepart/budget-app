@@ -15,7 +15,7 @@ exports[`should render NotFoundPage correctly 1`] = `
           className="header__title"
         >
           <h1>
-            Expensify
+            Budget App
           </h1>
         </div>
       </div>

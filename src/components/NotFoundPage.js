@@ -7,7 +7,7 @@ const NotFoundPage = () => (
       <div className="content-container">
         <div className="header__content">
           <div className="header__title">
-            <h1>Expensify</h1>
+            <h1>Budget App</h1>
           </div>
         </div>
       </div>

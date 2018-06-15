@@ -6,7 +6,7 @@ import { startGoogleLogin, startFacebookLogin } from '../actions/auth';
 export const LoginPage = ({ onGoogleLogin, onFacebookLogin }) => (
   <div className="box-layout">
     <div className="box-layout__box">
-      <h1 className="box-layout__title">Expensify</h1>
+      <h1 className="box-layout__title">Budget App</h1>
       <p>Manage your wealth and better your life</p>
       <hr />
       <div className="box-layout__buttons">
